@@ -1,0 +1,476 @@
+* {
+  font-family: 'Nunito', sans-serif;
+  /* Poppins'*/
+
+  /* font-family: 'Roboto Slab', serif; */
+
+  margin: 0;
+  padding: 0;
+
+  text-decoration: none;
+  outline: none;
+  border: none;
+  /* text-transform: capitalize; */
+}
+
+
+body {
+
+  scrollbar-width: none;
+  /* <--- A Barra de rolagem deixa de ser exibida no FireFox */
+
+}
+
+
+
+
+
+
+/*
+_____________________________________________________________________
+
+##   BARRA / SUPERIOR / TITULO / [ header ]         
+_____________________________________________________________________
+
+*/
+.header {
+
+  width: 100%;
+
+  height: 10vh;
+
+  animation: gradient 10s ease infinite;
+  background: linear-gradient(-45deg, #52dcee, #3c5be7, #23a6d5, #239dd5) no-repeat;
+  background-size: 300% 300%;
+  font-family: sans-serif;
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  color: white;
+
+  font-size: 1.2rem;
+
+}
+
+
+
+@keyframes gradient {
+
+  0% {
+    background-position: 0 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0 50%;
+  }
+
+}
+
+/*
+_____________________________________________________________________
+
+##   BARRA / CENTRAL/ CONTEUDO / [ main ]         
+_____________________________________________________________________
+
+*/
+
+.main {
+
+  background: linear-gradient(to left bottom, #a9c4d6, #b8c7f1);
+
+  background: rgb(151, 201, 243);  /* vermelho */
+  /*var(--azul); */
+
+  height: 80vh;
+  /*  <----<<<  a propriedade [ vh ] permite adaptar o conteudo na área visualizada */
+
+
+  padding: 0 1px 0 1px;
+
+  display: flex;
+
+  flex-direction: row;
+
+  flex-wrap: wrap;
+
+
+
+  justify-content: center;
+  /* justify-content: space-around; */
+
+  justify-content: space-evenly;
+
+  /* align-content: space-evenly; */
+
+  align-items: center;
+
+  overflow-y: scroll;
+  /*  <--  Todo conteudo se adapta inserindo uma barra de rolagem  */
+
+  scrollbar-width: none;
+  /* <--- A Barra de rolagem deixa de ser exibida no FireFox */
+
+
+}
+
+.main::-webkit-scrollbar {
+
+  display: none;
+  /* <--- A Barra de rolagem deixa de ser exibida */
+
+  /* scrollbar-width: none;  */
+
+}
+
+/* -- OS DOIS BOX CENTRAL -- */
+
+
+.box {
+
+  background-color: #bef2ff;   /* rosa  */
+
+  /* min-height: 250px; */
+
+  min-height: 70vh;
+
+  margin: 4px 20px 4px 20px;
+  padding: 4px;
+
+  /* border: 2px solid black; */
+
+  border-radius: 10px;
+
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+  flex-grow: 1;
+
+}
+
+
+.esquerdo {
+
+  max-width: 40rem;
+
+}
+
+
+.texto {
+
+  background-color: yellow;
+
+  min-width: 60%;
+  height: 54vh;
+
+  /* margin: 6px; */
+  padding: 6px;
+
+  /* border-radius: 10px; */
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  flex-grow: 1;
+  flex-shrink: 1;
+
+}
+
+
+textarea {
+
+  width: 70%;
+  height: 94%;
+
+  font-size: 18px;
+  /* margin: 30px 0 25px 0; */
+  border-radius: 10px;
+  box-shadow: 5px 4px 3px #77808b;
+  box-shadow: 0px 0px 1em #666;
+
+}
+
+
+.botoes {
+
+  background: #d6f4fd;
+
+  min-width: 60%;
+  height: 80px;
+
+  display: flex;
+  flex-wrap: wrap;
+
+  justify-content: space-evenly;
+  align-items: center;
+
+  flex-grow: 1;
+
+}
+
+button {
+
+  width: 150px;
+  height: 45px;
+  background: #99b4d3;
+
+  border-radius: 10px;
+  font-size: 16px;
+
+}
+
+button:hover {
+
+  cursor: pointer;
+
+  box-shadow: 0px 0px 1em #666;
+  border: 1px solid rgb(2, 11, 134);
+
+  transform: scale(1.1);
+  transition: all .5s linear;
+  
+
+}
+
+
+.direito {
+
+  max-width: 26rem;
+
+}
+
+
+
+
+/*
+_____________________________________________________________________
+
+##   BARRA / INFERIOR / RODAPE / [ footer ]         
+_____________________________________________________________________
+
+*/
+
+.footer {
+
+  background-color: rgb(43, 104, 161);
+
+  height: 6%;
+
+  padding: 1.2rem;
+
+  display: flex;
+
+  justify-content: center;
+
+}
+
+.footer .rodape {
+
+  font-size: 1.1rem;
+  color: rgb(254, 255, 254);
+}
+
+
+/* ------------------------------------------------- */
+
+
+/* -- ANIMAÇÃO RODAPE / [ footer ] -- */
+
+.rodape {
+
+  overflow: hidden;
+  position: relative;
+
+  /* animation: text-reveal 4s ease forwards; */
+}
+
+.rodape::after {
+
+  animation: test-reveal 4s ease forwards infinite;
+  background-color: rgb(43, 104, 161);
+
+  content: '';
+  display: block;
+
+  position: absolute;
+
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+}
+
+/* ------------------------------------------------- */
+
+
+/* -- TEXTOS DO RODAPE / [ footer ] -- */
+
+h2 {
+
+  animation: fade 4s 1s forwards infinite;
+
+  opacity: 0;
+
+}
+
+.direitos {
+
+  animation: fade 4s 1s forwards infinite;
+
+  opacity: 0;
+
+}
+
+@keyframes test-reveal {
+
+  from {
+    transform: translateX(-101%);
+  }
+
+  to {
+    transform: translateX(101%);
+  }
+
+}
+
+@keyframes fade {
+  to {
+    opacity: 1;
+  }
+}
+
+
+
+
+/*
+_____________________________________________________________________
+
+##   RESOLUÇÃO TELA [ 991 ] / [ media queries ]         
+_____________________________________________________________________
+
+*/
+
+@media (max-width:991px) {
+
+  html {
+    font-size: 80%;
+  }
+
+  body {
+    padding-left: 0;
+  }
+
+  .main {
+
+
+    background: rgb(206, 191, 191);
+
+
+    height: 82vh;
+  }
+
+  .box {
+
+    background-color: #ccd864;
+
+    min-height: 120px;
+
+    min-width: 40vh;
+
+  }
+
+  .esquerdo {
+
+    max-width: none;
+  }
+
+  .direito {
+
+    max-width: none;
+  }
+
+  button {
+
+    font-size: 14px;
+
+  }
+
+
+
+
+}
+
+/*
+_____________________________________________________________________
+
+##   RESOLUÇÃO TELA [ 450 ] / [ media queries ]         
+_____________________________________________________________________
+
+*/
+
+@media (max-width:450px) {
+
+  html {
+    font-size: 50%;
+  }
+
+  .header {
+
+    font-size: 1.8rem;
+  }
+
+  .main {
+
+    height: 86vh;
+
+  }
+
+  .box {
+
+    background-color: #277557;
+
+    min-height: 120px;
+
+    margin: 20px 12px 10px 12px;
+
+  }
+
+  .texto {
+
+    min-width: 30%;
+    height: 56vh;
+    background-color: rgb(238, 32, 221);
+
+  }
+
+  .botoes {
+
+    background: #054622;
+    height: 150px;
+    min-width: 40%;
+
+  }
+
+  button {
+
+    width: 200px;
+    height: 45px;
+    background: #d63838;
+
+    font-size: 18px;
+
+  }
+
+
+
+}

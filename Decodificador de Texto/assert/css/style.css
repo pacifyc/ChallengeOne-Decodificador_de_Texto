@@ -128,10 +128,9 @@ _____________________________________________________________________
 
 /* -- OS DOIS BOX CENTRAL -- */
 
-
 .box {
 
-  background-color: #bef2ff;   /* rosa  */
+  background-color: #dce4e6;   /* rosa  */
 
   /* min-height: 250px; */
 
@@ -164,7 +163,7 @@ _____________________________________________________________________
 
 .texto {
 
-  background-color: yellow;
+  background-color: #dce4e6;  /* amarelo */
 
   min-width: 60%;
   height: 54vh;
@@ -199,10 +198,20 @@ textarea {
 
 }
 
+.direito .texto #exibe {
+
+  background-image:url(transparente.svg);
+  background-size:300px;
+  background-repeat:no-repeat;
+  background-size: cover;
+
+  /* background: #52ee8e; */
+}
+
 
 .botoes {
 
-  background: #d6f4fd;
+  background: #dce4e6; /* verde */
 
   min-width: 60%;
   height: 80px;
@@ -373,7 +382,7 @@ _____________________________________________________________________
   .main {
 
 
-    background: rgb(206, 191, 191);
+    /* background: rgb(206, 191, 191); */
 
 
     height: 82vh;
@@ -381,7 +390,7 @@ _____________________________________________________________________
 
   .box {
 
-    background-color: #ccd864;
+    /* background-color: #ccd864; */
 
     min-height: 120px;
 
@@ -437,7 +446,7 @@ _____________________________________________________________________
 
   .box {
 
-    background-color: #277557;
+    /* background-color: #277557; */
 
     min-height: 120px;
 
@@ -449,13 +458,13 @@ _____________________________________________________________________
 
     min-width: 30%;
     height: 56vh;
-    background-color: rgb(238, 32, 221);
+    /* background-color: rgb(238, 32, 221); */
 
   }
 
   .botoes {
 
-    background: #054622;
+    /* background: #054622; */
     height: 150px;
     min-width: 40%;
 
@@ -465,7 +474,7 @@ _____________________________________________________________________
 
     width: 200px;
     height: 45px;
-    background: #d63838;
+    /* background: #d63838; */
 
     font-size: 18px;
 

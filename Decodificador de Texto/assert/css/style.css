@@ -23,6 +23,79 @@ body {
 
 
 
+#close-modal {
+
+  background: #239dd5;
+  color: #fff;
+
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+  opacity: 0.9;
+  font-size: 1rem;
+  transition: 0.4s;
+
+
+}
+
+#fade {
+
+  background-color: rgba(0, 0, 0, 0.6);
+
+  width: 100%;
+  height: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 5;
+}
+
+#modal {
+
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  z-index: 10;
+  width: 500px;
+  max-width: calc(90% - 10rem);
+  padding: 1.2rem;
+  border-radius: 0.5rem;
+}
+
+.modal-header {
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+
+}
+
+.modal-body p {
+
+  margin-bottom: 1rem;
+
+}
+
+#modal.hide,
+#fade.hide {
+
+  opacity: 0;
+  pointer-events: none;
+
+}
+
+#modal.hide {
+  top: 0;
+}
+
 
 
 
@@ -82,7 +155,8 @@ _____________________________________________________________________
 
   background: linear-gradient(to left bottom, #a9c4d6, #b8c7f1);
 
-  background: rgb(151, 201, 243);  /* vermelho */
+  background: rgb(151, 201, 243);
+  /* vermelho */
   /*var(--azul); */
 
   height: 80vh;
@@ -130,7 +204,8 @@ _____________________________________________________________________
 
 .box {
 
-  background-color: #dce4e6;   /* rosa  */
+  background-color: #dce4e6;
+  /* rosa  */
 
   /* min-height: 250px; */
 
@@ -163,7 +238,8 @@ _____________________________________________________________________
 
 .texto {
 
-  background-color: #dce4e6;  /* amarelo */
+  background-color: #dce4e6;
+  /* amarelo */
 
   min-width: 60%;
   height: 54vh;
@@ -200,18 +276,36 @@ textarea {
 
 .direito .texto #exibe {
 
-  background-image:url(transparente.svg);
-  background-size:300px;
-  background-repeat:no-repeat;
+  background-image: url(transparente.svg);
+  background-size: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
 
   /* background: #52ee8e; */
 }
 
+.texto #exibe:hover {
+  background-image: url(teste.svg);
+
+  /* background-image: none; */
+  /* background-color: #3c5be7; */
+}
+
+
+.texto #exibe:focus {
+
+  background-image: url(teste.svg);
+  color: red;
+
+
+}
+
 
 .botoes {
 
-  background: #dce4e6; /* verde */
+  background: #dce4e6;
+  /* verde */
 
   min-width: 60%;
   height: 80px;
@@ -246,7 +340,7 @@ button:hover {
 
   transform: scale(1.1);
   transition: all .5s linear;
-  
+
 
 }
 
@@ -324,6 +418,7 @@ _____________________________________________________________________
 
 /* -- TEXTOS DO RODAPE / [ footer ] -- */
 
+h1,
 h2 {
 
   animation: fade 4s 1s forwards infinite;

@@ -1,6 +1,23 @@
+
+
+let diaNoite = document.querySelector('#claro-escuro');
+
+diaNoite.onclick = () =>{
+    diaNoite.classList.toggle('fa-sun');
+    if(diaNoite.classList.contains('fa-sun')){
+        document.body.classList.add('active');
+    }else{
+        document.body.classList.remove('active');
+    }
+}
+
+
+
+
 const vogais = {
   a: "ai",
   e: "enter",
+  é: "éturn",
   i: "imes",
   o: "ober",
   u: "ufat"
@@ -52,7 +69,7 @@ btn_codificar.addEventListener("click", function () {
 
   //const valor = name.value;
 
-  if (valor.length < 3) {
+  if (valor.length < 2) {
 
     console.log(typeof (valor));
     console.log(valor.length);

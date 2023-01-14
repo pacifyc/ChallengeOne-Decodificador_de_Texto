@@ -40,7 +40,7 @@ body {
 
 }
 
-body.active{
+body.active {
 
 
   --botao_noite_dia:#4c4686;
@@ -50,7 +50,9 @@ body.active{
   --cor_icone: rgb(255, 255, 255);
   --cor_sobra: 0px 0px 1em rgb(255, 255, 255);
 
-  --area_texto: rgb(25, 31, 105);
+  --area_texto: rgb(64, 70, 158);
+
+  --cor_texto: #fff;
 
 }
 
@@ -357,6 +359,7 @@ textarea {
   height: 94%;
 
   background-color: var(--area_texto);
+  color: var(--cor_texto);
 
   font-size: 18px;
   /* margin: 30px 0 25px 0; */
@@ -391,7 +394,9 @@ textarea {
 .texto #exibe:focus {
 
   background-image: url(teste.svg);
-  color: red;
+
+  color: var(--cor_texto);
+  /* color: red; */
 
 
 }

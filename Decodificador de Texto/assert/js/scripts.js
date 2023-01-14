@@ -17,7 +17,6 @@ diaNoite.onclick = () =>{
 const vogais = {
   a: "ai",
   e: "enter",
-  é: "éturn",
   i: "imes",
   o: "ober",
   u: "ufat"

@@ -52,7 +52,13 @@ const valor = document.querySelector("#recebe").value;
 console.log(valor.length);
 
 
+let paragrafo = document.createElement("p");
 
+let modal_mensagem = document.querySelector(".modal-body");
+
+
+/*------------------------------------------------------------------------*/
+/* Botão para CLIPTOGRAFA */
 
 btn_codificar.addEventListener("click", function () {
 
@@ -60,7 +66,7 @@ btn_codificar.addEventListener("click", function () {
   let resultado = "";
   let ativo = 0;
 
-  //document.getElementById("recebe").focus();
+  //document.getElementById("recebe").focus();  
 
   const valor = document.querySelector("#recebe").value;
 
@@ -72,10 +78,23 @@ btn_codificar.addEventListener("click", function () {
 
     console.log(typeof (valor));
     console.log(valor.length);
+    console.log(paragrafo);
 
     console.log("valor vazio");
+
+    // - Mensagem para exibir no modal
+
+    paragrafo.innerHTML = "Caro usúario informe um texto e depois pressione o botão 'CLIPTOGRAFAR' e na caixa no lado direito será exibido o seu texto codificado"
+
+    modal_mensagem.appendChild(paragrafo);
+
+    //--------------------------------------------------//
+
+
     modal.classList.toggle("hide");
     fade.classList.toggle("hide");
+
+    
 
 
   } else {
@@ -109,21 +128,19 @@ btn_codificar.addEventListener("click", function () {
     }
 
 
-    console.log(valor.length);
+    //console.log(valor.length);
 
-    console.log("esse é o valor", valor);
+    //console.log("esse é o valor", valor);
 
     document.querySelector("#exibe").value = resultado;
 
 
-    console.log(resultado);
+    //console.log(resultado);
 
-    console.log(frase.length);
+    //console.log(frase.length);
 
 
   }
-
-
 
   document.querySelector("#recebe").value = " ";
 
@@ -131,11 +148,8 @@ btn_codificar.addEventListener("click", function () {
 
 
 
-
 /*------------------------------------------------------------------------*/
-
-
-
+/* Botão para DESCLIPTOGRAFA */
 
 btn_descodificar.addEventListener("click", function () {
 
@@ -159,6 +173,17 @@ btn_descodificar.addEventListener("click", function () {
     console.log(valor.length);
 
     console.log("valor vazio");
+
+    // - Mensagem para exibir no modal
+
+    paragrafo.innerHTML = "Caro usúario para 'DESCLIPTOGRAFA' o texto, você deve colar o texto na caixa do lado esquerdo e pressionar o botão 'DESCLIPTOGRAFA' que automaticamnete será exibido na caixa do lado direito o seu texto descliptografado.";
+
+    modal_mensagem.appendChild(paragrafo);
+
+    //--------------------------------------------------//
+
+
+
     modal.classList.toggle("hide");
     fade.classList.toggle("hide");
 
@@ -201,28 +226,20 @@ btn_descodificar.addEventListener("click", function () {
 
       
       
-    }
+    }   
 
 
+    //onsole.log(valor.length);
 
-
-    
-
-
-    console.log(valor.length);
-
-    console.log("esse é o valor", valor);
+    //console.log("esse é o valor", valor);
 
     document.querySelector("#exibe").value = resultado;
 
+    //console.log(resultado);
 
-    console.log(resultado);
-
-    console.log(frase.length);
-
+    //console.log(frase.length);
 
   }
-
 
   document.querySelector("#recebe").value = " ";
 
@@ -230,7 +247,7 @@ btn_descodificar.addEventListener("click", function () {
 
 
 /*------------------------------------------------------------------------*/
-
+/* Botão para COPIAR o texto */
 
 let btnCopia = document.querySelector('#copiar');
 
@@ -245,3 +262,4 @@ btnCopia.addEventListener('click', function () {
   document.querySelector("#exibe").value = " ";
 
 });
+

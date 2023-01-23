@@ -1,14 +1,13 @@
+:root {
 
-:root{
+  --botao_noite_dia: #66c0e4;
 
-  --botao_noite_dia:#66c0e4;
+  --box_um_dois: #dce4e6;
 
-  --box_um_dois:#dce4e6;
+  --cor_icone: rgb(253, 255, 160);
+  --cor_sobra: 0px 0px 1em #666;
 
-  --cor_icone:rgb(253, 255, 160);
-  --cor_sobra:0px 0px 1em #666;
-
-  --area_texto:rgb(255, 255, 255);
+  --area_texto: rgb(255, 255, 255);
 
 
 
@@ -43,9 +42,9 @@ body {
 body.active {
 
 
-  --botao_noite_dia:#4c4686;
+  --botao_noite_dia: #4c4686;
 
-  --box_um_dois:rgb(158, 158, 158);
+  --box_um_dois: rgb(158, 158, 158);
 
   --cor_icone: rgb(255, 255, 255);
   --cor_sobra: 0px 0px 1em rgb(255, 255, 255);
@@ -186,7 +185,7 @@ _____________________________________________________________________
 */
 
 
-#claro-escuro{
+#claro-escuro {
 
   height: 3rem;
   width: 3rem;
@@ -374,7 +373,7 @@ textarea {
 
 .direito .texto #exibe {
 
-  background-image: url(transparente.svg);
+  background-image: url(../imagem/transparente.svg);
   background-size: 300px;
   background-position: center;
   background-repeat: no-repeat;
@@ -384,7 +383,7 @@ textarea {
 }
 
 .texto #exibe:hover {
-  background-image: url(teste.svg);
+  /* background-image: url(../imagem/transparente.svg); */
 
   /* background-image: none; */
   /* background-color: #3c5be7; */
